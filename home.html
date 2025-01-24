@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>ARTT MANIA - Serigrafía, Sublimación y Bordado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(
+    35deg,
+    hsl(238deg 100% 25%) 0%,
+    hsl(266deg 100% 26%) 1%,
+    hsl(278deg 100% 27%) 2%,
+    hsl(288deg 100% 27%) 5%,
+    hsl(297deg 100% 28%) 10%,
+    hsl(305deg 100% 31%) 17%,
+    hsl(311deg 100% 35%) 28%,
+    hsl(316deg 100% 39%) 42%,
+    hsl(320deg 100% 43%) 56%,
+    hsl(324deg 100% 45%) 67%,
+    hsl(329deg 100% 44%) 75%,
+    hsl(333deg 100% 42%) 82%,
+    hsl(337deg 100% 41%) 87%,
+    hsl(341deg 100% 39%) 91%,
+    hsl(345deg 100% 37%) 94%,
+    hsl(349deg 100% 35%) 96%,
+    hsl(353deg 100% 33%) 98%,
+    hsl(0deg 100% 30%) 100%
+  );
+            color: #333;
+        }
+        header {
+            position: relative;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 110px 0; /* Aumenta el padding superior e inferior */
+    background-image: linear-gradient(
+            35deg,
+            hsl(238deg 100% 25%) 0%,
+            hsl(266deg 100% 26%) 4%,
+            hsl(278deg 100% 27%) 8%,
+            hsl(288deg 100% 27%) 13%,
+            hsl(297deg 100% 28%) 19%,
+            hsl(305deg 100% 31%) 26%,
+            hsl(311deg 100% 35%) 33%,
+            hsl(316deg 100% 39%) 41%,
+            hsl(320deg 100% 43%) 48%,
+            hsl(324deg 100% 45%) 56%,
+            hsl(329deg 100% 44%) 63%,
+            hsl(333deg 100% 42%) 69%,
+            hsl(337deg 100% 41%) 75%,
+            hsl(341deg 100% 39%) 81%,
+            hsl(345deg 100% 37%) 86%,
+            hsl(349deg 100% 35%) 91%,
+            hsl(353deg 100% 33%) 96%,
+            hsl(0deg 100% 30%) 100%
+        );
+    }
+
+    .header-text {
+        text-align: center;
+        z-index: 1;
+        position: relative;
+        flex: 1;
+    }
+
+    header h1 {
+        font-size: 3em;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin: 0;
+        color: #fff;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    header p {
+        margin: 10px 0 0;
+        font-size: 1.2em;
+        color: #ff69b4;
+        font-style: italic;
+    }
+
+    .header-image {
+        position: absolute;
+        right: 80px; /* Mueve la imagen ligeramente a la izquierda */
+        top: 49%;
+        transform: translateY(-50%);
+        width: 250px; /* Imagen más grande */
+        height: auto;
+        margin: 0;
+    }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+            color: white;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block;
+        }
+        nav a:hover {
+            background: #FF2A68;
+        }
+        section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#services, #about {
+    background-color: white; /* Fondo blanco para las secciones */
+    margin: 20px 0;
+    display: grid;
+    justify-content: center; /* Alinea el contenido horizontalmente */
+    align-items: center; /* Alinea el contenido verticalmente */
+    flex-direction: column; /* Organiza los elementos en columna */
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.8em;
+    margin: 10px 0;
+}
+
+/* Reducir tamaño del título y ponerlo blanco */
+#contact h2 {
+    font-size: 1.8em; /* Ajusta el tamaño a algo más pequeño */
+    margin-bottom: 10px; /* Reducir espacio inferior */
+    color: white; /* Cambia el color del texto a blanco */
+}
+
+/* Añadir un texto atractivo debajo del título */
+.cta-text {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: white; /* Color blanco para el texto */
+    font-weight: 500;
+}
+/* Contenedor para centrar el botón */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    margin-bottom: 20px; /* Espaciado debajo del botón */
+}
+/* Estilo para el botón de WhatsApp */
+.whatsapp-button {
+    display: flex; /* Usa flexbox para alinear los elementos */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    width: 250px; /* Ancho del botón */
+    padding: 15px 20px; /* Relleno interno */
+    text-align: center;
+    font-size: 1.2em;
+    background-color: #25D366; /* Color verde de WhatsApp */
+    color: white;
+    border-radius: 10px; /* Esquinas redondeadas */
+    text-decoration: none;
+    margin-bottom: 20px; /* Espaciado debajo del botón */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E; /* Fondo más oscuro al pasar el ratón */
+}
+
+/* Icono de WhatsApp dentro del botón */
+.whatsapp-button i {
+    margin-right: 10px; /* Espaciado entre el ícono y el texto */
+    font-size: 1.6em; /* Tamaño del ícono */
+}
+
+/* Estilo para los íconos sociales */
+.social-links {
+    display: flex;
+    justify-content: center; /* Centra los botones en la fila */
+    gap: 20px; /* Espaciado entre los botones */
+    margin-top: 20px;
+}
+
+/* Eliminar subrayado de los enlaces de redes sociales */
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    color: #333;
+    font-size: 1.5em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+.social-links a:hover {
+    background-color: #333;
+    color: white;
+}
+
+.social-links a i {
+    font-size: 1.5em;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-image: url('hero.jpg'); /* Asegúrate de tener una imagen atractiva */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero h2 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.services {
+    display: flex; /* Cambia de grid a flex para alinear en fila */
+    gap: 20px; /* Espacio entre los items */
+    padding: 40px 20px;
+    text-align: center;
+    justify-content: center; /* Centra los items en la fila */
+}
+.service-container {
+    display: flex; /* Cambia a flexbox para que estén en fila */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    gap: 20px; /* Espaciado entre los elementos */
+    margin-top: 20px; /* Espacio superior para separar del título */
+}
+
+.service-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 30%; /* Asegura que cada item ocupe un 30% del ancho */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+
+.service-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.service-item p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .service-container {
+        flex-direction: column; /* Cambia la dirección de los elementos a columna */
+        align-items: center; /* Centra los elementos en la pantalla */
+    }
+
+    .service-item {
+        width: 80%; /* Los items ocupan el 80% del ancho en pantallas pequeñas */
+        margin-bottom: 20px; /* Espacio entre los elementos */
+    }
+}
+/* Estilo general para la galería */
+.gallery {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Estilo del carrusel */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#gallery h2 {
+    color: white; /* Cambia el color del texto a blanco */
+    font-size: 2.5em; /* Ajusta el tamaño según tu preferencia */
+    text-align: center; /* Centra el título */
+    margin-bottom: 20px; /* Ajusta el espacio debajo del título */
+}
+/* Contenedor de las imágenes */
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Estilo de las imágenes */
+.carousel-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Media query para pantallas grandes */
+@media (min-width: 1024px) {
+    .carousel {
+        width: 90%; /* Hacer más largo el carrusel en pantallas grandes */
+        margin-left: 5%;
+    }
+
+    .carousel-images img {
+        min-width: 33.33%; /* Mostrar 3 imágenes al mismo tiempo */
+    }
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .carousel-images img {
+        min-width: 100%; /* Mostrar una imagen a la vez */
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-text">
+            <h1>ARTT MANIA</h1>
+            <p>Plasma tus ideas y llena tu vida de colores</p>
+        </div>
+        <img src="assets/img/polera1.png" alt="Imagen ARTT MANIA" class="header-image">
+    </header>    
+    <nav>
+        <a href="#services">Servicios</a>
+        <a href="#gallery">Galería</a>
+        <a href="#about">Nosotros</a>
+        <a href="#contact">Contactos</a>
+    </nav>
+    <section class="hero">
+        <h2>Damos vida a tus ideas con arte</h2>
+        <p>En ARTT MANIA, transformamos tus conceptos en productos únicos y personalizados con técnicas de serigrafía, sublimación y bordado. Haz que tu estilo destaque y deja que nuestro arte impulse tu marca.</p>
+    </section>
+    
+    <section id="services" class="services">
+        <h2 class="service-title">Servicios</h2>
+        <div class="service-container">
+            <div class="service-item">
+                <h3>Serigrafía</h3>
+                <p>Ofrecemos serigrafía de alta calidad para prendas de vestir, accesorios y productos promocionales. Nuestros diseños son duraderos y vibrantes, ideales para hacer que tu marca se vea profesional y llamativa.</p>
+            </div>
+            <div class="service-item">
+                <h3>Sublimación</h3>
+                <p>La sublimación es la técnica perfecta para productos personalizados como tazas, almohadas, llaveros y más. Con colores brillantes y detalles finos, tus diseños se verán increíbles.</p>
+            </div>
+            <div class="service-item">
+                <h3>Bordado</h3>
+                <p>El bordado es una opción elegante y duradera para personalizar ropa y accesorios. Cada puntada está pensada para resaltar tu diseño, con acabados de alta calidad que no pasarán desapercibidos.</p>
+            </div>
+        </div>
+    
+</section>
+<section id="gallery" class="gallery">
+    <h2>Galería</h2>
+    <div class="carousel" id="carousel">
+        <div class="carousel-images">
+            <img src="assets/img/pole2.jpg" alt="Imagen 1">
+            <img src="assets/img/pole3.jpg" alt="Imagen 2">
+            <img src="assets/img/pole4.jpg" alt="Imagen 3">
+            <img src="assets/img/pole5.jpg" alt="Imagen 4">
+            <img src="assets/img/pole6.jpg" alt="Imagen 5">
+            <img src="assets/img/pole7.jpg" alt="Imagen 6">
+            <img src="assets/img/gorra1.jpg" alt="Imagen 7">
+            <img src="assets/img/gorra2.jpg" alt="Imagen 8">
+            <img src="assets/img/taza1.jpg" alt="Imagen 9">
+            <img src="assets/img/taza2.jpg" alt="Imagen 10">
+            <img src="assets/img/taza3.jpg" alt="Imagen 11">
+        </div>
+    </div>
+</section>
+<section id="about" class="about">
+    <h2>Nosotros</h2>
+    <p>En ARTT MANIA, transformamos tus ideas en realidad a través de técnicas de serigrafía, sublimación y bordado. Nuestro equipo está comprometido con la excelencia y la creatividad.</p>
+    <!-- Botón de WhatsApp con ícono a la izquierda -->
+    <div class="button-container">
+        <a href="https://wa.link/0x4gmw" class="whatsapp-button">
+            <i class="fab fa-whatsapp"></i> Escribenos ahora!!
+        </a>
+    </div>
+</section>
+
+
+
+    <section id="contact" class="contact">
+        <h2>Contactos</h2>
+        
+        
+        
+        <p class="cta-text">¡No te pierdas de nuestras últimas novedades, promociones y mucho más! Síguenos en Facebook, Instagram, TikTok o llamanos.</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/share/18SQ7wjpiK/" target="_blank" class="social-icon">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.tiktok.com/@arttmania1?_t=ZM-8tKUlsMnbu9&_r=1" target="_blank" class="social-icon">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="tel:+591 70586965" class="social-icon">
+                <i class="fas fa-phone-alt"></i>
+            </a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 ARTT MANIA. Todos los derechos reservados.</p>
+    </footer>
+</body>
+<script>
+    let currentIndex = 0;
+const carousel = document.getElementById('carousel');
+const images = carousel.querySelector('.carousel-images');
+const totalImages = images.children.length;
+
+// Función para mover las imágenes
+function moveCarousel() {
+    currentIndex++;
+    if (currentIndex >= totalImages) {
+        currentIndex = 0; // Volver al inicio cuando se llegue al final
+    }
+    updateCarousel();
+}
+
+// Función para actualizar la posición del carrusel
+function updateCarousel() {
+    const imageWidth = images.children[0].offsetWidth;
+    images.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+}
+
+// Desplazamiento automático (cada 3 segundos)
+let autoSlide = setInterval(moveCarousel, 3000);
+
+// Permitir que el carrusel avance al hacer clic derecho o tocar
+carousel.addEventListener('mousedown', (e) => {
+    let startX = e.clientX;
+    let isTouch = false;
+    
+    // Detectar el movimiento del mouse
+    const mouseMoveHandler = (e) => {
+        isTouch = true;
+        const diff = startX - e.clientX;
+        if (diff > 50) { // Si el movimiento es hacia la izquierda, avanzar
+            clearInterval(autoSlide);
+            currentIndex++;
+            if (currentIndex >= totalImages) {
+                currentIndex = 0;
+            }
+            updateCarousel();
+            document.removeEventListener('mousemove', mouseMoveHandler);
+        } else if (diff < -50) { // Si el movimiento es hacia la derecha, retroceder
+            clearInterval(autoSlide);
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = totalImages - 1;
+            }
+            updateCarousel();
+            document.removeEventListener('mousemove', mouseMoveHandler);
+        }
+    };
+
+    // Detectar fin de movimiento (cuando el usuario suelta el mouse)
+    document.addEventListener('mouseup', () => {
+        if (!isTouch) { // Si no fue un movimiento, podemos avanzar automáticamente
+            clearInterval(autoSlide);
+            autoSlide = setInterval(moveCarousel, 3000);
+        }
+        document.removeEventListener('mousemove', mouseMoveHandler);
+    });
+    document.addEventListener('mousemove', mouseMoveHandler);
+});
+
+// Función para el toque en pantallas táctiles
+carousel.addEventListener('touchstart', (e) => {
+    let startX = e.touches[0].clientX;
+
+    const touchMoveHandler = (e) => {
+        const diff = startX - e.touches[0].clientX;
+        if (diff > 50) { // Deslizar hacia la izquierda
+            clearInterval(autoSlide);
+            currentIndex++;
+            if (currentIndex >= totalImages) {
+                currentIndex = 0;
+            }
+            updateCarousel();
+            carousel.removeEventListener('touchmove', touchMoveHandler);
+        } else if (diff < -50) { // Deslizar hacia la derecha
+            clearInterval(autoSlide);
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = totalImages - 1;
+            }
+            updateCarousel();
+            carousel.removeEventListener('touchmove', touchMoveHandler);
+        }
+    };
+
+    carousel.addEventListener('touchmove', touchMoveHandler);
+
+    // Volver a iniciar el desplazamiento automático cuando se termine el toque
+    carousel.addEventListener('touchend', () => {
+        clearInterval(autoSlide);
+        autoSlide = setInterval(moveCarousel, 3000);
+    });
+});
+
+// Inicializar el carrusel
+updateCarousel();
+
+</script>
+
+
+</html>
